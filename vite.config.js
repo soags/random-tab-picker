@@ -25,6 +25,20 @@ const manifest = defineManifest({
     // },
     default_title: 'Random Tab'
   },
+  commands: {
+    open_random_tab: {
+      suggested_key: {
+        default: 'Alt+R'
+      },
+      description: 'Open a random tab from window.'
+    },
+    close_and_open_random_tab: {
+      suggested_key: {
+        default: 'Alt+W'
+      },
+      description: 'Close current tab and open a random tab from window.'
+    }
+  },
   background: {
     service_worker: 'src/background.ts',
     type: 'module'
